@@ -51,11 +51,28 @@ public:
         pay=p;
     }
 };
+class Teacher:public Graduate
+{
+private:
+    string address;
+public:
+    Teacher(int n,string nam,char s,int p,string add):Graduate(n,nam,s,p)
+    {
+        address=add;
+    }
+    void display()
+    {
+        cout<<address<<endl;;
+    }
+    
+};
 int main()
 {
     Graduate s1(661,"szy",'m',1500);
     //s1.set_up();
     s1.display();
+    Teacher t(20141105054,"songzhiyuan",'m',2000,"neimenggu");
+    t.display();
     return 0;
     
     
